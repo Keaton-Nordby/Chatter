@@ -17,5 +17,8 @@
     "url": "https://github.com/Keaton-Nordby/Chatter/issues"
   },
   "homepage": "https://github.com/Keaton-Nordby/Chatter#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.3"
+  }
 }
