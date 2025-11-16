@@ -1,2 +1,5 @@
 [phases.setup]
 nodejs_version = "22.12"
+
+[build]
+no_cache = true
