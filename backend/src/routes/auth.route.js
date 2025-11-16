@@ -7,7 +7,7 @@ router.get("/signup", (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-    req.send("Login endpoint");
+    res.send("Login endpoint");
 });
 
 router.get("/logout", (req, res) => {
