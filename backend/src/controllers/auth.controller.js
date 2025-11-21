@@ -67,7 +67,6 @@ export const login = async(req, res) => {
     if (!email || !password) {
         return res.status(400).json({ message: "Email and passowrd are required" })
     }
-
     try {
         const user = await User.findOne({email})
         if(!user) return res.status(400).json({ message: "Invalid credentials" })
@@ -82,12 +81,10 @@ export const login = async(req, res) => {
             email: user.email,
             profilePic: user.profilePic,
         });
-
     } catch (error) {
         console.error("Error in login controller:", error);
         res.status(500).json({ message: "Internal server error" })
     }
-
 };
 
 export const logout = (_, res) => {
@@ -107,10 +104,8 @@ export const updateProfile = async(req, res) => {
 
     } catch (error) {
         console.log("Error in update profile:", error);
-        res.status(500).json({ message: "Internal server error" });
-        
-        
-    }
+        res.status(500).json({ message: "Internal server error" });  
+    };
 };
 
 
